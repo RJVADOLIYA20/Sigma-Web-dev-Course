@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Float & Clear</title>\
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+            /*flow-root : When We need to make design like news-paper*/
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: left;
+        }
+        img{
+            float: left;/*Now image allowed its right side content*/
+       }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="Float&clear.jpg" width="233px" alt="">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla neque, laborum corrupti asperiores id temporibus sint obcaecati provident vero aperiam similique eligendi, officia laudantium ex consequatur corporis aut quia repellendus, vel architecto doloremque minima?</p>
+        </div>
+        <div class="card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quasi quaerat, neque a quidem ullam reiciendis quia in ab nulla illo culpa quibusdam perspiciatis deleniti sequi repudiandae delectus ut minus! Fugit consequuntur est deleniti aspernatur corrupti. Obcaecati ducimus asperiores assumenda dolores ratione dignissimos, magni hic ea praesentium dolorum consequatur error iusto perferendis facere doloremque, commodi, libero magnam mollitia amet atque. Enim itaque molestiae ex quia, laborum ad consequatur possimus? Nisi veniam dicta repellendus soluta minus sunt cupiditate nihil error eos et earum reprehenderit aliquam ab, maxime saepe inventore fugiat. Ab, dicta expedita quia, voluptate amet delectus fugiat totam eius ex exercitationem cum voluptatum doloribus modi accusamus ad ut obcaecati sint debitis ullam quaerat. Sint fuga quis et nisi totam adipisci officia quidem earum.</div>
+        <div class="card">Card3</div>
+    </div>
+</body>
+</html>

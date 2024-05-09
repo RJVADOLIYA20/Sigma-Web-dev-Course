@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+            /* Using this 4 property into 1 using transition-property:all;*/
+            /* transition-property: background-color,transform; all  it's a mixture of 4 property. thaat is trnasition-duration/timing-function/delay */
+            /* transition-duration: 3s;   how many time taken to make a transition /*Kitni der tak chaleng* */
+            /* transition-timing-function: ease-in-out;  */
+            /* transition-delay:1s ;   How many times after this works. kitni der bad ye animation chalenga */
+            /*Sort hand property fot transition:*/
+            transition: all 3s ease-in-out 1s;
+        }
+        .translate{
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!---Ek state thi biji state ma smoothly javu-->
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+
+</html>

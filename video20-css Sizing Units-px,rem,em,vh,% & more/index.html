@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css SIZING</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 20px;  /*root element <html>tag BASED ON THIS WE USED THE rem SIZING*/
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;  /*px is unit 1px = 1.96 inch*/
+            /* width: 1535.6px; */
+            /* respomsive Unit of sizing */
+            width: 80vw;   /* view port width*/
+            height: 10vh;
+            margin: auto;   /* MArgin Auto work on only block-Level Element(div) not work on inline Element(span)*/
+            background-color: aquamarine;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;  /*px is unit 1px = 1.96 inch*/
+            /* width: 1535.6px; */
+            /* respomsive Unit of sizing */
+            width: 80vw;   /* view port width*/
+            height: 80vh;  /*view port height of width====> that's Means when i give width =80vw then its yakes 80% of width's height*/
+            margin:23px auto;  /*Top-Bottom -left/rigth*/ /* MArgin Auto work on only block-Level Element(div) not work on inline Element(span)*/
+            background-color: aquamarine;
+            /* font-size: 18px; */
+        }
+
+    .container p{
+        font-size: 2em; /*em makes the inherites property's accordingly font-size  if we have conatiner font-size=18px then p font-size having=2em then overall fontsize of paragrapg = 36px*/
+    }
+    .mycont{
+        border: 2px solid black;
+        box-sizing: border-box;
+        /* background-color: rgb(0, 0, 0); */
+        margin: 20px auto;
+        font-size: 23px;
+        /* width: 100vmin;  here vmin= vh = heigth for the pc/laptop */
+        width: 142 vh;
+        color: rgb(0, 0, 0);;
+    }
+    </style>
+</head>
+<body>
+    <h1>video20-css Sizing Units-px,rem,em,vh,% & more</h1>
+    <ol>
+        <li>list of the sizzing we use.</li>
+        <li>px</li>
+        <li>%</li>
+        <li>vw & vh </li>
+        <li>em && rem</li>
+        <li>vmin & vmax --&gt; sometimes your width is big then heigth but in phone your height is bigger then width so in this if you are in monitor then vmin=height</li>
+    </ol>
+    <div class="box">This is a Box</div>
+    <div class="container">
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad recusandae vitae corrupti hic explicabo minus error, ab ea reiciendis ducimus officiis enim modi.</p>
+       
+    </div>
+    <div class="mycont">
+        i am another container
+    </div>
+</body>
+</html>

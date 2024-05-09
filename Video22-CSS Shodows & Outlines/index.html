@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows & Outlines</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 5px 5px 15px 5px green;
+        }
+        .text-shadow{
+            text-shadow:15px 3px 2px  red;
+        }
+        .p-outline{
+            outline: 2px solid black;/*diff. b/w border & outline is border defines inside the outline */
+            /*outline property is not a part of the Box-model its means its does not take space.*/
+            outline-offset: 20px;/*using this we can arrnage the outline - duri changes like eleemn*/
+            /*Outline dosn't have the radius property so its inherit fromthe bborder-radius property.*/
+            border-radius: 8px ;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Shadows & Outlines</h1>
+    <h2>CSS Box Shadow Syntax</h2>
+    <h3>Box-shadow: h-offset v-offset blur spread color inset;</h3>
+    <p> <b>h-offset & V-offset:</b>  Determines the Shadow's horizontal And vertical position &lt;Specify that Shadoe kitni dur hogi &gt;</p>
+    <p> <b>blur:</b>the larger the value,the blurrier the shadow</p>
+    <p><b>spread:</b> Expand or Shrinks the Shadow Size</p>
+    <p><b>color: Defines The Shadow Color</b></p>
+    <p><b>inset:</b>MAkes the Shadow Inner</p>
+
+   <div class="box">
+    I am A box
+   </div> 
+   <h1>how we will give text-shadow</h1>
+   <h2>Syntax of Text-Shadow</h2>
+   <h3>text-shadow: h-offset v-offset blur color;</h3>
+   <p class="text-shadow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sit laboriosam facere. Mollitia quo nobis alias aperiam dolore totam sint odit quos enim!</p>
+   <h1>Outlines:</h1>
+   <h3>An Outline is a line that is drawn around elements, outside the borders, to make the element "STAND OUT". it's commanly used for accessiblity purposes,like highlighting focused elements.</h3>
+   <h2>Syntax of Outlines:</h2>
+   <h4>Outline:width style color;</h4>
+   <p class="p-outline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat veritatis culpa provident reprehenderit omnis voluptatibus consequuntur neque dolorem explicabo, quasi, rerum repellat porro.</p>
+</body>
+</html>

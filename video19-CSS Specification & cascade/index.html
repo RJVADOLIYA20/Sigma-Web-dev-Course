@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Specificity</title>
+    <style>
+        h1{
+            color:red;
+        }
+        .yellow{
+            color: yellow;
+        }
+        .cred{
+            color: red;
+            /* color: cyan !important; */
+        }
+        .cpurple{
+            color: purple;   /* Same Type of Slector Then At last Property Apllied to the Element*/
+        }
+        [data-x=a]{
+            background-color: red;
+        }
+        /* a.harryclass.rohan-class[href]:hover{
+            color:red;   Specifity Challenge Calculate this :1+10+10+10+10=41
+        } */
+    </style>
+</head>
+<body>
+    <h1>If in Your Web-Page Having Element which Having Two Different Style Then Which is Applied???</h1>
+      <p>Confilct Resolution in CSS having algorithm Named as a <mark> CASECADE ALGORITHM.</mark></p>
+        <pre>
+            1. <b> position and order of appearance</b>:
+            2. <b>Specificity</b> : An ALGO that Determines Which CSS Selctor has the Strongest match
+            <strong>Inline Having More Specificity then ID AND ID having More Specificity than Class </strong><br>
+            <em>String &gt; ID SELECTOR &gt; Class OR Attribute Selector &gt; Element Selector &gt; Universal Selector</em> <br>
+            <h4>To Calculate Specificity Assign Value to each Part of the sellector</h4>
+            <ul>
+                <li>Universal Selector:0</li>
+                <li>Element Slectors and pseudo-elements:1</li>
+                <li>Class Selectors,attribute Selector and pseudo-Class:10</li>
+                <li>id Selectors :100</li>
+                <li>inline Stele:1000</li>
+            </ul>
+            3. <b> origin</b>:The ordeer in Which Css appears And where it comes from,whather that is browser style,css form a browser Extension , on your authored Css  &lt;Browser having InBuilt Css WHICH is KNOWN as USER AGENT STYLE-SHEET &gt;
+            4. <b>Importance</b> : if we use <mark>!important</mark> then it's Having Heavily weighted   
+        </pre>
+    <div>
+        <h1 style="color:blue" class=" yellow cred cpurple" data-x="a">  CSS Specificity</h1>
+    </div>
+</body>
+</html>

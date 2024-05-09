@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Media Queries</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        /* if height>width== portrait & height<width==Landscape */
+        @media screen and (orientation:landscape){
+            body{
+                border:13px solid purple;
+                
+            }
+        }
+        @media only screen and (min-width:455px){
+            body{
+                background-color : blue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color : steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Css Media Queries</h1>
+    <h2>Using it for making Responsive designs.</h2>
+    <h2>history: in Css2 defined a media Rule in which that says if we see our website in another deskot/mobile we can change the Style.</h2>
+    <h1>Syntax:</h1>
+    <h2>@media not|only mediatype and (Expressions) css-code;</h2>
+    <h3>mediatype: All/printer/screen & speech</h3>
+
+    <div>
+        Hey i am red Body Guy!
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

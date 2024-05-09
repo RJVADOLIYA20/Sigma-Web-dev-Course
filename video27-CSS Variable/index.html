@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root{
+            --color:blue;
+            --seccolor:rgb(119, 119, 177);
+            --defpad:23px;
+            --defop:0.4;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* div:nth-child(2) */
+        .nav{
+            background-color: var(--color);
+            /* background-color: rgb(207, 217, 129); */
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+        }
+        ul li:first-child{
+            /* color over-ridding concept inside */
+            --color:rgb(196, 219, 195);
+
+            /* if variable is not Found then we can give as fallback Variable */
+            /* background-color: var(--color,blue); */
+
+            background-color: var(--color);
+        }
+        .container{
+            /* background-color: rgb(104, 128, 80); */
+            background-color:var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Variables:</h1>
+    <h2>CSS Variables can hold the any type of values,colors,background,Urls,Strings,Numbers.</h2>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim voluptates reprehenderit exercitationem illum inventore ut blanditiis recusandae. Beatae ut voluptates laudantium soluta animi nostrum quis pariatur quia quo, natus nemo laboriosam quae dolores iste similique, at eligendi debitis corporis esse? Porro odio quam tempore?
+    </div>
+</body>
+</html>

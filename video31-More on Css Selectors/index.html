@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On CSS Selector</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+        /* .box:first-line{
+            background-color: yellow;
+            color: red;
+        }  */
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        } */
+        /* ---->GROUPING in SELECTOR
+        p,.box,a, [data-color="primary"]{
+            /* margin-top: 45px; */
+            /* padding-top: 45px; */
+        /* } */
+        
+        /* [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 45px;
+        } */
+
+        /*PSEUDO ELEMENTS:*/
+
+        /* .box:nth-child(even){
+            background-color: blue;
+            color: white;
+        } */
+        /* .box:nth-last-child(2){
+            background-color: red;
+        }
+       */
+       .boxes::before{
+        content: "Raj is good";
+        color: red;
+       }
+       .boxes::after{
+        content: "Sigma Course is also Good.";
+        color: blue;
+       }
+        ::selection{
+        color: aqua;
+        background-color: saddlebrown;
+       }
+       .box::first-letter{
+        color: purple;
+        font-size: 32px;
+       }
+      input::placeholder{
+        color: red;
+        /* font-size: 56px; */
+      }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am First Box inside the Boxes.</div>
+        <div class="box">Hey I am Box.</div>
+        <div class="box">Hey I am Box.</div>
+        <input type="text" placeholder="Enter Your Text Here">
+    </div>
+</body>
+</html>
