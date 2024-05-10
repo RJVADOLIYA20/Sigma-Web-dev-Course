@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* justify-content: center; */
+            align-items: center;
+            align-content: flex-start;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            flex-flow:row wrap;
+            /* flex-flow: <flex-direction><flex wrap>; */
+                gap: 14px;
+        }
+        .items{
+            /* flex-grow: 1; */
+            height: 32px;
+            width: 32px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            /* margin: 4px; */
+        }
+        .item-1{
+            /* flex-grow: 3; */
+           flex-shrink: ; 
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="items item-1">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+          
+           
+        </div>
+
+    </main>
+</body>
+</html>
